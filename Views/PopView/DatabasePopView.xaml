@@ -1,0 +1,49 @@
+﻿<Window x:Class="GrblController.Views.PopView.DatabasePopView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrblController.Views.PopView"
+        mc:Ignorable="d"
+        Title="MySQL 데이터베이스" Height="314.984" Width="322.885">
+    <Grid Margin="10">
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="189*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="서버" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="46,8,38,7" Width="34"/>
+            <Label Content="데이터베이스" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="22,7,14,8" Width="82"/>
+            <Label Content="사용자 이름" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="26,8,18,7" Width="74"/>
+            <Label Content="암호" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="46,7,38,8" Width="34"/>
+            <Label Content="생성할 테이블 이름" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="0,8,4,7" Width="114"/>
+            <TextBox Text="{Binding Server}" Grid.Column="1" Margin="10,10,0,10"/>
+            <TextBox Text="{Binding DatabaseServer}" Grid.Row="1" Grid.Column="1" Margin="10,10,0,10"/>
+            <TextBox Text="{Binding UserName}" Grid.Row="2" Grid.Column="1" Margin="10,10,0,10"/>
+            <TextBox Text="{Binding Password}" Grid.Row="3" Grid.Column="1" Margin="10,10,0,10"/>
+            <TextBox Text="{Binding TableName}" Grid.Row="4" Grid.Column="1" Margin="10,10,0,10"/>
+            <Grid Grid.Row="5" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding SetCommand}" Content="확인" Grid.Column="2" Margin="2"/>
+                <Button Command="{Binding CancelCommand}" Content="취소" Grid.Column="3" Margin="2" />
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
