@@ -77,7 +77,11 @@ namespace GrblController.Services
         }
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            getDataService.StringData = serialPort.ReadLine();
+            while(serialPort.BytesToRead > 0)
+            {         
+                getDataService.StringData = serialPort.ReadExisting();
+            }  
+            
         }
     }
 }

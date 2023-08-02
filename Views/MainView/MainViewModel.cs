@@ -245,8 +245,7 @@ namespace GrblController.Views.MainView
 
         private void GrblDataReceived()
         {
-            string data = grblGetDataService.StringData;
-            ReceivedData += " >>> " + data; 
+            ReceivedData += grblGetDataService.StringData;
         }
 
         private void SendSerial()
