@@ -34,6 +34,11 @@ namespace GrblController.Views
         public void GrpahUpdate(double x, bool state)
         {
             linePlotModel.Points.Add(new DataPoint(x, output));
+            
+            if(linePlotModel.Points.Count > 100)
+            {
+                linePlotModel.Points.RemoveAt(0);
+            }
             PlotModel.InvalidatePlot(state);
         }
 
