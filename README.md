@@ -2,7 +2,7 @@
 이 리포지스토리는 GRBL 컨트롤러에 대한 리포지토리입니다.
 
 ## Contents
-- [소개](https://dotnet.microsoft.com/ko-kr/download/dotnet-framework/#소개)
+- [소개](https://github.com/37inm/GrblController/blob/master/README.md#%EC%86%8C%EA%B0%9C)
 - 개발환경
 
 ## 소개
