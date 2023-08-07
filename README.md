@@ -13,7 +13,7 @@
 이 프로그램은 윈도우 운영체제에서 CNC 기계의 모션 제어 기능과, UART 통신이 가능한 센서를 연결하여 csv, MySQL 데이터베이스에 측정값을 저장하는 기능을 제공하는 유틸리티 프로그램입니다.
 
 ## 개발환경
-:heavy_check_mark: WPF .NET Framework 4.7.2 [.NET 4.7.2](https://dotnet.microsoft.com/ko-kr/download/dotnet-framework/net472)
+:heavy_check_mark: WPF [.NET Framework 4.7.2](https://dotnet.microsoft.com/ko-kr/download/dotnet-framework/net48)
 
 :heavy_check_mark: Visual Studio 2019
 
