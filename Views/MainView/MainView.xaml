@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GrblController.Views.MainView"
         xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
         mc:Ignorable="d"
-        Title="GrblController+Monitoring_Sensor" Height="583" Width="914" MinHeight="583" MinWidth="914">
+        Title="GRBLContorller" Height="583" Width="914" MinHeight="583" MinWidth="914">
     <Window.DataContext>
         <local:MainViewModel/>
     </Window.DataContext>
