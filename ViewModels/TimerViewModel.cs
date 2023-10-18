@@ -4,7 +4,7 @@ using System.Windows.Threading;
 
 namespace GrblController.ViewModels
 {
-    class TimerViewModel : INotifyPropertyChanged
+    class TimerViewModel : ViewModelBase
     {
         private DispatcherTimer _timer;
         private int _seconds; // 초 단위 시간 변수 선언
@@ -13,12 +13,9 @@ namespace GrblController.ViewModels
         private string _timerContent;
         public string TimerContent
         {
-            get { return _timerContent; }
-            set
-            {
-                _timerContent = value;
-                OnPropertyChanged(nameof(TimerContent));
-            }
+            get => _timerContent; 
+            set => SetProperty(ref _timerContent, value);
+            
         }
 
         public TimerViewModel()
@@ -48,11 +45,6 @@ namespace GrblController.ViewModels
             TimerContent = "00:00:00";
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
     }
 }

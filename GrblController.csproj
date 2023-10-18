@@ -127,16 +127,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DatabaseModel.cs" />
-    <Compile Include="Services\CsvService.cs" />
-    <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\GetDataService.cs" />
-    <Compile Include="Services\SerialService.cs" />
     <Compile Include="ViewModels\Command\RelayCommand.cs" />
     <Compile Include="ViewModels\CsvViewModel.cs" />
     <Compile Include="ViewModels\DatabaseViewModel.cs" />
     <Compile Include="ViewModels\OxyPlotViewModel.cs" />
     <Compile Include="ViewModels\SerialViewModel.cs" />
     <Compile Include="ViewModels\TimerViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\MainView\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>

@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace GrblController.Views.MainView
 {
-    class MainViewModel : INotifyPropertyChanged
+    class MainViewModel : ViewModelBase
     {
         public SerialViewModel GrblSerialViewModel { get; set; }
         public TimerViewModel GrblTimerViewModel { get; set; }
@@ -25,24 +25,19 @@ namespace GrblController.Views.MainView
         private string commandLine;
         public string CommandLine
         {
-            get { return commandLine; }
-            set
-            {
-                commandLine = value;
-                OnPropertyChanged(nameof(CommandLine));
-            }
+            get => commandLine; set => SetProperty(ref commandLine, value);
+
         }
 
         private string x_axis;
         public string X_axis
         {
-            get { return x_axis; }
+            get => x_axis; 
             set
             {
                 if (int.TryParse(value, out _))
                 {
-                    x_axis = value;
-                    OnPropertyChanged(nameof(X_axis));
+                    SetProperty(ref x_axis, value);
                 }
                 else
                 {
@@ -54,13 +49,12 @@ namespace GrblController.Views.MainView
         private string y_axis;
         public string Y_axis
         {
-            get { return y_axis; }
+            get => y_axis;
             set
             {
                 if (int.TryParse(value, out _))
                 {
-                    y_axis = value;
-                    OnPropertyChanged(nameof(Y_axis));
+                    SetProperty(ref y_axis, value);
                 }
                 else
                 {
@@ -73,13 +67,12 @@ namespace GrblController.Views.MainView
         private string z_axis;
         public string Z_axis
         {
-            get { return z_axis; }
+            get => z_axis;
             set
             {
                 if (int.TryParse(value, out _))
                 {
-                    z_axis = value;
-                    OnPropertyChanged(nameof(Z_axis));
+                    SetProperty(ref z_axis, value);
                 }
                 else
                 {
@@ -92,13 +85,12 @@ namespace GrblController.Views.MainView
         private string speed;
         public string Speed
         {
-            get { return speed; }
+            get => speed;
             set
             {
                 if (int.TryParse(value, out _))
                 {
-                    speed = value;
-                    OnPropertyChanged(nameof(Speed));
+                    SetProperty(ref speed, value);
                 }
                 else
                 {
@@ -111,34 +103,19 @@ namespace GrblController.Views.MainView
         private bool graphState;
         public bool GraphState
         {
-            get { return graphState; }
-            set
-            {
-                graphState = value;
-                OnPropertyChanged(nameof(GraphState));
-            }
+            get => graphState; set => SetProperty(ref graphState, value);
         }
 
         private string graphContent;
         public string GraphContent
         {
-            get { return graphContent; }
-            set
-            {
-                graphContent = value;
-                OnPropertyChanged(nameof(GraphContent));
-            }
+            get => graphContent; set => SetProperty(ref graphContent, value);
         }
 
         private string receivedData;
         public string ReceivedData
         {
-            get { return receivedData; }
-            set
-            {
-                receivedData = value;
-                OnPropertyChanged(nameof(ReceivedData));
-            }
+            get => receivedData; set => SetProperty(ref receivedData, value);
         }
 
 
@@ -162,7 +139,7 @@ namespace GrblController.Views.MainView
         public RelayCommand PauseCommand { get; set; }
 
         private double dataCount = 1;
-        private string line = $"{"Time"},{"value"}";
+
 
         public MainViewModel()
         {
@@ -178,6 +155,7 @@ namespace GrblController.Views.MainView
 
             SensorValue = new OxyPlotViewModel("Sensor Value");
 
+            string line = $"{"Time"},{"value"}";
             CsvViewModel = new CsvViewModel(line);
             DatabaseViewModel = new DatabaseViewModel();
 
@@ -371,10 +349,6 @@ namespace GrblController.Views.MainView
             GrblSerialViewModel.SendSerial(command2);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
     }
 }
