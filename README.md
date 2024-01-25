@@ -2,9 +2,8 @@
 이 리포지스토리는 GRBL 컨트롤러에 대한 리포지토리입니다.
 
 ## Contents
-- [소개](https://github.com/37inm/GrblController/blob/master/README.md#%EC%86%8C%EA%B0%9C)
-- [개발환경](https://github.com/37inm/GrblController/blob/master/README.md#%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD)
-
+- 소개
+- 개발환경
 ## 소개
 > GRBL은 G코드를 입력으로 사용하고 Arduino를 통해 모션 제어를 출력합니다.
 <img src="https://github.com/37inm/GrblController/assets/131761210/5417c323-d87f-457a-9f45-483b69b79b96" width="600"/>
