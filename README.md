@@ -9,7 +9,7 @@
 <img src="https://github.com/37inm/GrblController/assets/131761210/5417c323-d87f-457a-9f45-483b69b79b96" width="1000"/>
 <img src="https://github.com/37inm/GrblController/assets/131761210/07df8ec3-49ac-41fc-8958-62d500b3c4fc" width="1000"/>
 
-이 프로그램은 윈도우 운영체제에서 CNC 기계의 모션 제어 기능과, UART 통신이 가능한 센서를 연결하여 csv, MySQL 데이터베이스에 측정값을 저장하는 기능을 제공하는 유틸리티 프로그램입니다.
+> 윈도우 운영체제에서 CNC 기계의 모션 제어 기능과, UART 통신이 가능한 센서를 연결하여 csv, MySQL 데이터베이스에 측정값을 저장하는 기능을 제공하는 유틸리티 프로그램입니다.
 
 ## 개발환경
 :heavy_check_mark: WPF [.NET Framework 4.8](https://dotnet.microsoft.com/ko-kr/download/dotnet-framework/net48)
